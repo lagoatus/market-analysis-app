@@ -1,6 +1,7 @@
-* {text-align: center;
+
+body {text-align: center;
   font-family: sans-serif;
-  background-color: gray;
+  background-color: rgb(239, 239, 239);
   }
 
 .photos {
@@ -21,7 +22,7 @@
   margin-left: 35px;
   margin-top: 55px;
   display: inline-block;;
-  background-color: rgb(56, 64, 72);
+  background-color: gray;
   opacity: 0.6;
   z-index: 50;
   color: red;
@@ -30,9 +31,9 @@
   }
   h5 {
     font-size: 20px;
-    background-color: rgb(56, 64, 72);
+    background-color: gray;
     opacity: .9;
-    color: #DE5842;
+    color: #cc3300;
     margin: 1px;
     z-index: 50;
     margin-left: 60px;
@@ -42,7 +43,7 @@
 
   .header {
     margin: -12px;
-    background-color: rgb(56, 64, 72);
+    background-color: gray;
     padding: 0px 0px 0px 0px;
     position: absolute;
     display: block;
@@ -61,14 +62,14 @@
     margin-right: 45px;
     margin-top: 65px;
     display: inline-block;
-    background-color: rgb(56, 64, 72);
+    background-color: gray;
     opacity: 0.5;
     color: red;
     text-decoration: none;
   }
   a {
     font-size: 14px;
-    background-color: rgb(56, 64, 72);
+    background-color: gray;
     text-decoration: none;
     color: white;
     font-style: Arial;
@@ -83,25 +84,23 @@
 section {
   display: inline-block;
 
+
 }
-#pic1, img {
+
+
+img {
   display: inline-block;
   width: 350px;
   height: 350px;
-
-
-}
-
-#pic2, img {
-  display: inline-block;
-  width: 350px;
-  height: 350px;
+  -moz-box-shadow: 5px 5px 5px #777777;
+  -webkit-box-shadow: 5px 5px 5px #777777;
+  box-shadow: 5px 5px 5px #777777;
+  padding: 10px 10px 10px 10px
 
 }
 
-#pic3, img {
-  display: inline-block;
-  width: 350px;
-  height: 350px;
-
+img:hover {
+  border: 2px solid red;
 }
+
+#chartContainer {height: 300px; width: 100%; position: relative;}
