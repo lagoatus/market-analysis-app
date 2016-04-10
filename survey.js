@@ -1,4 +1,8 @@
 // Create object constructor for photos of products
+// MUCH OF THIS .JS FILE'S CONTENT IS VERY INFLUENCED OR COPYIED FROM MARK'S IN-CLASS HELP OF MY PROJECT
+// TODAY...
+// I ADDED THE SOME OF THE COUNT FUNCTIONS AT THE END, ALL OF THE STYLING, THE CONSTRUCTOR
+//THE OBJECTS, THE CHART, AND I SIMPLIFIED A COUPLE FUNCTIONS.
 var total = 0;
 function photosObj (names, src) {
   this.names = names;
