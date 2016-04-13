@@ -97,7 +97,13 @@ chart = new CanvasJS.Chart("chartContainer", {
         chart.render();
       }
 
+function reset() {
+  window.location.reload();
+  showChart();
+
+}
+
 function showChart() {
   console.log("showing chart");
-  chart.render();
+  displayChart();
 }
