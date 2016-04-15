@@ -71,7 +71,7 @@ function registerClick() {
       break; // stop loop
       }
     }
-    if (photosArray[index].y++ > 15) {alert("You have selected this image 15 times... you must love this product!");}
+
   displayImages();
   if (total > 14) {
     displayChart();
