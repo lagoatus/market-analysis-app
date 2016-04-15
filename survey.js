@@ -1,7 +1,7 @@
 // Create object constructor for photos of products
 // MUCH OF THIS .JS FILE'S CONTENT IS VERY INFLUENCED OR COPYIED FROM MARK'S IN-CLASS HELP OF MY PROJECT
 // TODAY...
-// I ADDED THE SOME OF THE COUNT FUNCTIONS AT THE END, ALL OF THE STYLING, THE CONSTRUCTOR
+// I ADDED SOME OF THE COUNT FUNCTIONS AT THE END, ALL OF THE STYLING, THE CONSTRUCTOR
 //THE OBJECTS, THE CHART, AND I SIMPLIFIED A COUPLE FUNCTIONS.
 var total = 0;
 function photosObj (names, src) {
@@ -74,6 +74,10 @@ function registerClick() {
   displayImages();
   if (total > 14) {
     displayChart();}
+
+      var stringY = JSON.stringify(photosArray); // usually placed inside the function
+
+      localStorage.setItem('count', stringY);
 }
 
 displayImages();
@@ -106,4 +110,12 @@ function reset() {
 function showChart() {
   console.log("showing chart");
   displayChart();
+
 }
+
+//
+// var retrieveIt = localStorage.getItem('count');// no parsing yet in this example
+// console.log(retrieveIt);
+//
+// var parseIt = JSON.parse(retrieveIt); // now parse to see boolean correctly
+// console.log(parseIt);
