@@ -6,7 +6,7 @@
 var total = 0;
 function photosObj (names, src) {
   this.names = names;
-  this.label = names; 
+  this.label = names;
   this.id = names;
   this.src = src;
   this.y = 0;
@@ -74,7 +74,8 @@ function registerClick() {
     if (photosArray[index].y++ > 15) {alert("You have selected this image 15 times... you must love this product!");}
   displayImages();
   if (total > 14) {
-    displayChart();}
+    displayChart();
+  }
 
       var stringY = JSON.stringify(photosArray); // usually placed inside the function
 
@@ -105,6 +106,7 @@ chart = new CanvasJS.Chart("chartContainer", {
 function reset() {
   window.location.reload();
   showChart();
+  localStorage.clear();
 
 }
 
@@ -114,9 +116,13 @@ function showChart() {
 
 }
 
-//
-// var retrieveIt = localStorage.getItem('count');// no parsing yet in this example
-// console.log(retrieveIt);
-//
-// var parseIt = JSON.parse(retrieveIt); // now parse to see boolean correctly
-// console.log(parseIt);
+function onload() {
+
+var retrieveIt = localStorage.getItem('count');// no parsing yet in this example
+console.log(retrieveIt);
+if (retrieveIt != null) {photosArray = JSON.parse(retrieveIt); // now parse to see boolean correctly
+console.log(photosArray);
+
+}
+}
+onload();
