@@ -6,6 +6,7 @@
 var total = 0;
 function photosObj (names, src) {
   this.names = names;
+  this.label = names; 
   this.id = names;
   this.src = src;
   this.y = 0;
