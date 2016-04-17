@@ -85,6 +85,7 @@ function registerClick() {
 displayImages();
 
 
+
 var chart = null;
 function displayChart() {
 
