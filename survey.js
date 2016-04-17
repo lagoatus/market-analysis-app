@@ -113,7 +113,7 @@ function showChart() {
 
 }
 
-//
+//Hello
 // var retrieveIt = localStorage.getItem('count');// no parsing yet in this example
 // console.log(retrieveIt);
 //
