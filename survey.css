@@ -122,3 +122,7 @@ body #photos img:hover {
   position: relative;
 
 }
+
+#fade {
+  opacity: .2;
+}
