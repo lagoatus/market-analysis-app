@@ -96,7 +96,7 @@ img {
   -webkit-box-shadow: 5px 5px 5px #777777;
   box-shadow: 5px 5px 5px #777777;
   padding: 10px 10px 10px 10px;
-  transition: all .5s ;
+  transition: all .2s ;
   vertical-align: middle;
 }
 
