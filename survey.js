@@ -30,6 +30,7 @@ photosArray.push(new photosObj ("dragon", "dragon.jpg"));
 
 
 var cycledImgs = new Array (); // creates empty new array
+var displayedImages = new Array ();
 
 function makeArrayCopy() {
 for (var i = 0; i < photosArray.length; i++) {
@@ -41,7 +42,13 @@ function randomPhoto() {
   if (cycledImgs.length == 0) {makeArrayCopy();
   }
     var i = Math.floor(Math.random() * cycledImgs.length);
+    while (displayedImages.indexOf(cycledImgs[i].id) >= 0) {
+    i = Math.floor(Math.random() * cycledImgs.length);
+    alert("duplicate image avoided");
+    }
     var photoToUse = cycledImgs.splice(i, 1)[0];// brackets to reference first item in array
+  displayedImages.push(photoToUse.id);
+
     return photoToUse; // splice to remove a photo that has been used
   } // use availablePhotos for length so that it it taking from an array that is getting smaller
   // with each loop.
@@ -49,6 +56,8 @@ function randomPhoto() {
 function displayImages() { // create function to show 3 images
   var placeHolder = document.getElementById('photos'); // get html id to place images in
   placeHolder.innerHTML = ""; // IMPORTANT; used to clear images
+  displayedImages = new Array ();
+
   for (var index = 0; index < 3; index++) { // create for loop to run func 3 times for 3 images
     rnd = randomPhoto(); // random num generator with easy access var name
     var getPixs = photosArray[rnd] // random product images is selected and placed in this var
@@ -62,8 +71,10 @@ function displayImages() { // create function to show 3 images
 function registerClick() {
   // console.log("Image clicked");
   // console.log(event.target.src);
-  console.log("clicked"+event.target.id);
-  total++;
+
+  var insert = document.getElementById('count');
+  insert.innerHTML = "<p>"+(++total)+" /15 </p>";
+
   for (var index=0; index < photosArray.length; index++) {
     if (photosArray[index].names == event.target.id) {
       photosArray[index].y++;
