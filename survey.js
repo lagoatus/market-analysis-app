@@ -102,6 +102,8 @@ chart = new CanvasJS.Chart("chartContainer", {
          });
 
         chart.render();
+        var newid = document.getElementById("photos");
+        newid.id = "fade";
       }
 
 function reset() {
@@ -114,6 +116,8 @@ function reset() {
 function showChart() {
   console.log("showing chart");
   displayChart();
+  var newid = document.getElementById("photos");
+  newid.id = "fade";
 
 }
 
